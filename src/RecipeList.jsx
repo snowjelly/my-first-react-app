@@ -22,21 +22,32 @@ const recipes = [
   },
 ];
 
+function Recipe(props) {
+  return (
+    <div>
+      <h2>{props.name}</h2>
+      <h3>Ingredients</h3>
+      <ul>
+        {props.ingredients.map((ingredient) => (
+          <li key={ingredient}>{ingredient}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 export default function RecipeList() {
   return (
     <div>
       <h1>Recipes</h1>
       <ul>
         {recipes.map((recipe) => (
-          <div key={recipe.id}>
-            <h2>{recipe.name}</h2>
-            <h3>Ingredients</h3>
-            <ul>
-              {recipe.ingredients.map((ingredient) => (
-                <li key={ingredient}>{ingredient}</li>
-              ))}
-            </ul>
-          </div>
+          <Recipe
+            key={recipe.id}
+            id={recipe.id}
+            name={recipe.name}
+            ingredients={recipe.ingredients}
+          />
         ))}
       </ul>
     </div>
