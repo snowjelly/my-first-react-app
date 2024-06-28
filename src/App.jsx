@@ -1,6 +1,8 @@
 import "./App.css";
 
 const AnimalList = (animals) => {
+  if (!animals || animals === null)
+    throw new Error("Animals is null or undefined");
   function ListItem(props) {
     return <li>{props.animal}</li>;
   }
@@ -27,8 +29,7 @@ const AnimalList = (animals) => {
 
 function App() {
   const animals = ["Lion", "Cow", "Snake", "Lizard"];
-  if (!animals)
-    throw new Error('Animals List is empty in React Component "App"');
+  return <div>{AnimalList(animals)}</div>;
 }
 
 export default App;
