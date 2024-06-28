@@ -1,10 +1,10 @@
 import "./App.css";
-import Poem from "./Poem";
+import Gallery from "./Profile";
 
 function App() {
   return (
     <div>
-      <Poem />
+      <Gallery />
     </div>
   );
 }
