@@ -1,10 +1,10 @@
 import "./App.css";
-import List from "./SplittingAList";
+import RecipeList from "./RecipeList";
 
 function App() {
   return (
     <div>
-      <List />
+      <RecipeList />
     </div>
   );
 }
