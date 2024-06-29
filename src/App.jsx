@@ -1,10 +1,10 @@
 import "./App.css";
-import Profile from "./Avatar";
+import SculptureGallery from "./SculptureGallery";
 
 function App() {
   return (
     <div>
-      <Profile />
+      <SculptureGallery />
     </div>
   );
 }
