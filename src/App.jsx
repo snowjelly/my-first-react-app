@@ -1,10 +1,10 @@
 import "./App.css";
-import SculptureGallery from "./SculptureGallery";
+import Person from "./Person";
 
 function App() {
   return (
     <div>
-      <SculptureGallery />
+      <Person />
     </div>
   );
 }
